@@ -1,0 +1,27 @@
+// merged string alternatively
+// choosen language: C++
+
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+        string mergedString;
+        int len1 = word1.length();
+        int len2 = word2.length();
+        int i = 0;  
+        // as a string starts at 0 
+        
+        // Add characters alternately from both strings
+        
+        while (i < len1 || i < len2) {
+            if (i < len1) {
+                mergedString.push_back(word1[i]);
+            }
+            if (i < len2) {
+                mergedString.push_back(word2[i]);
+            }
+            i++;
+        }
+        
+        return mergedString;
+    }
+};

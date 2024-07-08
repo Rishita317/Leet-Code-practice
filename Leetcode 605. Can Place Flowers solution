@@ -1,0 +1,30 @@
+// Question: 
+//https://leetcode.com/problems/can-place-flowers/description/?envType=study-plan-v2&envId=leetcode-75 
+// Solution provided below
+
+class Solution {
+    public boolean canPlaceFlowers(int[] flowerbed, int n) {
+        for (int i = 0; i < flowerbed.length; i++) {
+            // Checking if the current plot is empty (* - * = correct), (* * _) incorrect
+            if (flowerbed[i] == 0) {
+                // Check the left plot (if it exists) and the right plot (if it exists)
+                // This ensures no adjacent flowers
+                boolean emptyLeft = (i == 0 || flowerbed[i - 1] == 0);
+                boolean emptyRight = (i == flowerbed.length - 1 || flowerbed[i + 1] == 0);
+                
+                if (emptyLeft && emptyRight) {
+                    // Plant a flower here
+                    flowerbed[i] = 1;
+                    // Decrement the number of flowers needed to plant
+                    n--;
+                    // If we have planted all required flowers, return true
+                    if (n == 0) {
+                        return true;
+                    }
+                }
+            }
+        }
+        // If after the loop we have not planted all required flowers, return false
+        return false;
+    }
+}

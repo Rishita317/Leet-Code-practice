@@ -1,0 +1,25 @@
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+
+# we initaize an empty list to build merge string
+# lists are efficienet in python
+
+        merge_string = [] 
+        len1, len2 = len(word1),len (word2)
+
+        i = 0
+
+        while i < len1 or i < len2:
+
+         if i < len1:
+                merge_string.append(word1[i])
+
+         if i < len2:
+                merge_string.append(word2[i])
+
+        # incrementing the counter
+        i+= 1
+
+        return ''.join(merged_string)
+
+      

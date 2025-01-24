@@ -1,0 +1,16 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+
+        num_dir = {}
+
+        for i, c_value in enumerate(nums):
+            Complement = target - c_value
+
+            if Complement in num_dir:
+                return [num_dir[Complement], i]
+
+            # This line should not be indented under the if statement
+            num_dir[c_value] = i
+
+        # This return statement should be outside the for loop
+        return []

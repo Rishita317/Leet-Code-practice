@@ -1,0 +1,24 @@
+import math
+from typing import List
+# the key concept used was binary search
+# time complexity: n log(m)
+class Solution:
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        left = 1  # Minimum possible eating speed
+        right = max(piles)  # Maximum possible eating speed
+        min_value = right
+
+        while left <= right:
+            mid = (left + right) // 2  # Try middle speed
+            total_time = 0
+
+            for p in piles:
+                total_time += math.ceil(p / mid)
+
+            if total_time <= h:
+                min_value = mid
+                right = mid - 1
+            else:
+                left = mid + 1
+
+        return min_value

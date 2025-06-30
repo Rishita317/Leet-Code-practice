@@ -4,7 +4,8 @@
 # premium lock icon
 # Companies
 # Given two strings s and t, return true if t is an anagram of s, and false otherwise.
-
+# Defination: a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
+# note if there is an addition of a new words its not considred an anagram ( example 2)
  
 
 # Example 1:

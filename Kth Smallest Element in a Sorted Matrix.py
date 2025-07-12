@@ -31,7 +31,7 @@
 import heapq
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-        # getting the number of rows and columns in a matrix
+        # getting the number of rows and columns in a matrix. 
         n = len(matrix)
         
     # using a min heap - smallest element is always on the top

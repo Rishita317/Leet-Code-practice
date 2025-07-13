@@ -1,3 +1,6 @@
+# This problem also uses hashmaps but the varible names are much better in the other file
+# called Two Sum with Hashmaps. So for simplicity refer to the other file if you are beginner
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 

@@ -43,7 +43,7 @@ class Solution:
             elif i % 3 == 0:
                 print("Fizz")
         # if the number is divisibale by 5
-            elif i % 5 ==0:
+            elif i % 5 == 0:
                 print("Buzz")
         # else it code will print out the number itself. for example 2 isn't divisible by 3 nor 5 
             else:
